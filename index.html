@@ -8,40 +8,48 @@
 </head>
 <body>
 
-  <!-- ----------------------------- Question 1 ------------------------------ -->
+  ----------------------------- Question 1 ------------------------------
   <p>Enter a phone number</p>
   <form action="">
-    <input type="tel">
-    <input type="submit" onclick="checkNumber(event)">
+    <fieldset>
+      <input type="tel">
+      <input type="submit" onclick="checkNumber(event)">
+    </fieldset>
   </form>
 
-  <!-- ----------------------------- Question 2 ------------------------------ -->
+  ----------------------------- Question 2 ------------------------------
   <div>
     <form action="">
-      <input type="range" min="0" max="100" value="50">
-      <meter min="0" max="10" value="5">
+      <fieldset>
+        <input type="range" min="0" max="100" value="50">
+        <meter min="0" max="10" value="5">
+      </fieldset>
     </form>
   </div>
 
-  <!-- ----------------------------- Question 3 ------------------------------ -->
+  ----------------------------- Question 3 ------------------------------
   <form action="" oninput="output.value=parseInt(num1.value) + parseInt(num2.value)">
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <output for ="num1 num2" name="output"></output>
+    <fieldset>
+      <input type="number" id="num1">
+      <input type="number" id="num2">
+      <output for ="num1 num2" name="output"></output>
+    </fieldset>
   </form>
 
-  <!-- ----------------------------- Question 4 ------------------------------ -->
+  ----------------------------- Question 4 ------------------------------
   <div>
     <form action="">
-      <label>Chose a Flavor</label> <br>
-      <input type="text" list="flavor">
-      <datalist id="flavor">
-        <option value="chocolate">Chocolate</option>
-        <option value="coconut">Coconut</option>
-        <option value="mint">Mint</option>
-        <option value="strawberry">Strawberry</option>
-        <option value="vanilla">Vanilla</option>
-      </datalist>
+      <fieldset>
+        <label>Chose a Flavor</label> <br>
+        <input type="text" list="flavor">
+        <datalist id="flavor">
+          <option value="chocolate">Chocolate</option>
+          <option value="coconut">Coconut</option>
+          <option value="mint">Mint</option>
+          <option value="strawberry">Strawberry</option>
+          <option value="vanilla">Vanilla</option>
+        </datalist>
+      </fieldset>
     </form>
   </div>
 
