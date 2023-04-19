@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- ----------------------------- Question 1 ------------------------------ -->
+  <p>Enter a phone number</p>
+  <form action="">
+    <input type="tel">
+    <input type="submit" onclick="checkNumber(event)">
+  </form>
+
+  <!-- ----------------------------- Question 2 ------------------------------ -->
+  <div>
+    <form action="">
+      <input type="range" min="0" max="100" value="50">
+      <meter min="0" max="10" value="5">
+    </form>
+  </div>
+
+  <!-- ----------------------------- Question 3 ------------------------------ -->
+  <form action="" oninput="output.value=parseInt(num1.value) + parseInt(num2.value)">
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <output for ="num1 num2" name="output"></output>
+  </form>
+
+  <!-- ----------------------------- Question 4 ------------------------------ -->
+  <div>
+    <form action="">
+      <label>Chose a Flavor</label> <br>
+      <input type="text" list="flavor">
+      <datalist id="flavor">
+        <option value="chocolate">Chocolate</option>
+        <option value="coconut">Coconut</option>
+        <option value="mint">Mint</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="vanilla">Vanilla</option>
+      </datalist>
+    </form>
+  </div>
+
+ <!--  I had to put 2 forms into a div because for some reason you cant have more then 2 forms as a direct child of an element -->
+  <script>
+    function checkNumber(e) {
+      e.preventDefault()
+      const Par = document.querySelector('p')
+      const input = document.querySelectorAll('input')
+      let Regex = /^\d{3}-\d{3}-\d{4}$/
+      console.log(Regex.test(input[0].value))
+      Par.innerText = Regex.test(input[0].value) ? "Number Valid" : "Number Invalid"
+    }
+  </script>
+</body>
+</html>
